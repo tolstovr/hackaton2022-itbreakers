@@ -74,30 +74,44 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 100%;
+    padding: 0 15px;
+    flex: 1;
+    overflow-y: auto;
+    height: 65vh;
+}
+
+.wik .wik-body .message-space::-webkit-scrollbar {
+    display: none
 }
 
 .wik .wik-body .message-space > .msg {
+    display: flex;
+    align-content: stretch;
     padding: 10px;
     margin: 5px 0;
-    width: 65%;
-    float: left;
-}
-
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+    border-radius: 15px;
 }
 
 .wik .wik-body .message-space > .msg:nth-child(odd) {
-    float: left !important;
     background-color: #fe3e2799;
+    justify-content: left;
+    padding-left: 1rem;
 }
 
 .wik .wik-body .message-space > .msg:nth-child(even) {
-    float: right !important;
     background-color: #2f2f2f;
+    justify-content: right;
+    padding-right: 1rem;
+}
+
+.wik .wik-body .message-space > .msg img {
+    content: "";
+    border-radius: 50%;
+    object-fit: cover;
+    width: 25px;
+    height: 25px;
+    margin-right: 1rem;
+    background-image: url(../images/wik.png);
 }
 
 /*сделать сообщения блочными, добавить иконки, сделать чередования flex: row и flex: row-reverse*/
@@ -125,10 +139,19 @@ body {
 }
 
 .wik .wik-body .input-bar .submit {
-    margin-right: 15px;
+    transition: .25s;
     border-radius: 50%;
     background-color: #4f4f4f;
-    width: 30px;
-    height: 30px;
-    text-align: center;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.wik .wik-body .input-bar .submit:hover {
+    transition: .25s;
+    background-color: #5f5f5f;
 }
