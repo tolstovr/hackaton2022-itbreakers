@@ -6,9 +6,9 @@ $(".wik .navbar").click(function() {
     $(".wik .navbar").css("animation", "none");
 });
 //удалить строки ниже
-$("#arrow").toggleClass("bi-caret-down-fill");
-$("#arrow").toggleClass("bi-caret-up-fill");
-$(".wik .wik-body").slideToggle(250);
+// $("#arrow").toggleClass("bi-caret-down-fill");
+// $("#arrow").toggleClass("bi-caret-up-fill");
+// $(".wik .wik-body").slideToggle(250);
 
 //chat history
 let chat_history = [];
