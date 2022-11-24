@@ -35,6 +35,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    font-weight: bold;
 
     justify-content: space-between;
     align-items: center;
