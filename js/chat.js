@@ -6,4 +6,6 @@ $(".wik .navbar").click(function() {
     $(".wik .wik-body").slideToggle(250);
 });
 //удалить строку ниже
+$("#arrow").toggleClass("bi-caret-down-fill");
+$("#arrow").toggleClass("bi-caret-up-fill");
 $(".wik .wik-body").slideToggle(250);
