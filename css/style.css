@@ -1,6 +1,81 @@
+@import url(keyframes.css);
+
 * {box-sizing: border-box;}
 html {
     scroll-behavior: smooth;
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url(../images/bg.jpeg);
+    background-size: cover;
+    color: #0b0b0d;
+}
+
+.wik {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    z-index: 15;
+    width: 412px;
+}
+
+.wik .navbar {
+    transition: .25s;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+
+    background-color: #0b0b0d;
+    color: #efefef;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 35px;
+    user-select: none;
+    -webkit-user-select: none;
+
+    animation: blinking 1s ease-in-out;
+    animation-iteration-count: 3;
+}
+
+.wik .navbar:hover {
+    transition: .25s;
+    background-color: #1f1f1f;
+}
+
+.wik .navbar .arrow {
+    font-size: larger;
+}
+
+.wik .wik-body {
+    display: none;
+    background-color: #1f1f1f;
+    color: #efefef;
+    padding: 5px 25px;
+}
+
+.wik .wik-body .message-space {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.wik .wik-body .message-space > .msg {
+    display: flex;
+    padding: 10px;
+}
+
+.wik .wik-body .message-space > .msg:nth-child(odd) {
+    float: left;
+}
+
+.wik .wik-body .message-space > .msg:nth-child(even) {
+    float: right;
 }
