@@ -198,21 +198,21 @@ body {
     align-items: center;
     color: #fefefe;
     position: absolute;
-    bottom: 10px;
-    left: 350px;
+    top: 75px;
+    right: 100px;
     z-index: 30;
     padding: 15px;
-    background-color: #fe3e2788;
+    background-color: #fe3e27aa;
     border-radius: 50px;
     max-width: 50vw;
-    font-size: xx-large;
+    font-size: large;
 }
 
 .tip1 > img {
-    height: 350px;
+    height: 150px;
 }
 
-.tip1 .bi-x-lg {
+.tip1 .close {
     position: absolute;
     top: 25px;
     right: 25px;
@@ -224,21 +224,21 @@ body {
     align-items: center;
     color: #fefefe;
     position: absolute;
-    bottom: 10px;
-    left: 350px;
+    bottom: 200px;
+    left: 550px;
     z-index: 30;
     padding: 15px;
-    background-color: #fe3e2788;
+    background-color: #fe3e27aa;
     border-radius: 50px;
     max-width: 50vw;
-    font-size: xx-large;
+    font-size: large;
 }
 
 .tip2 > img {
-    height: 350px;
+    height: 150px;
 }
 
-.tip2 .bi-x-lg {
+.tip2 .close {
     position: absolute;
     top: 25px;
     right: 25px;
@@ -250,22 +250,26 @@ body {
     align-items: center;
     color: #fefefe;
     position: absolute;
-    bottom: 10px;
-    left: 350px;
+    top: 250px;
+    right: 40vw;
     z-index: 30;
     padding: 15px;
-    background-color: #fe3e2788;
+    background-color: #fe3e27aa;
     border-radius: 50px;
     max-width: 50vw;
-    font-size: xx-large;
+    font-size: large;
 }
 
 .tip3 > img {
-    height: 350px;
+    height: 150px;
 }
 
-.tip3 .bi-x-lg {
+.tip3 .close {
     position: absolute;
     top: 25px;
     right: 25px;
+}
+
+.tip1 .close:hover, .tip2 .close:hover, .tip3 .close:hover {
+    color: #ccc;
 }

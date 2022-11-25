@@ -9,10 +9,6 @@ $(".wik .navbar").click(function() {
     $(".wik .wik-body").slideToggle(250);
     $(".wik .navbar").css("animation", "none");
 });
-// удалить строки ниже
-$("#arrow").toggleClass("bi-caret-down-fill");
-$("#arrow").toggleClass("bi-caret-up-fill");
-$(".wik .wik-body").slideToggle(250);
 
 //chat history
 let chat_history = [];
@@ -50,35 +46,34 @@ function chat_update() {
 //answers agregator
 function get_answer(user_input) {
     if (user_input.toLowerCase() == "Привет, Вик!".toLowerCase()) return "Хелло!";
-    if (user_input.toLowerCase() == "Как дела?".toLowerCase()) return "Пока не родила :)";
+    if (user_input.toLowerCase() == "Как дела?".toLowerCase()) return "Пока не родила:)";
     if (user_input.toLowerCase() == "Тупой".toLowerCase()) return "Не понял вас. Мне кажется, проблема не во мне...";
     
     if (user_input.toLowerCase() == "Что мне посмотреть?".toLowerCase()) return "Есть много фильмов. Какое у вас настроение на вечер?";
-    if (user_input.toLowerCase() == "Грустненько :(".toLowerCase()) return "Подобрал специально для вас:<div class='film'><img src='https://www.film.ru/sites/default/files/movies/posters/1613089-1576645.jpeg'><ul><li>Маска</li><li>1994</li><li>Джим Керри</li><li><a href='#'>Смотреть на Wink</a></li></ul></div><div class='film'><img src='https://images.iptv.rt.ru/images/c6tl5ejir4sslltqt4p0.jpg'><ul><li>Брюс всемогущий</li><li>2003</li><li>Джим Керри</li><li><a href='#'>Смотреть на Wink</a></li></ul></div>";
+    if (user_input.toLowerCase() == "Грустненько:(".toLowerCase()) return "Подобрал специально для вас:<div class='film'><img src='https://www.film.ru/sites/default/files/movies/posters/1613089-1576645.jpeg'><ul><li>Маска</li><li>1994</li><li>Джим Керри</li><li><a href='#'>Смотреть на Wink</a></li></ul></div><div class='film'><img src='https://images.iptv.rt.ru/images/c6tl5ejir4sslltqt4p0.jpg'><ul><li>Брюс всемогущий</li><li>2003</li><li>Джим Керри</li><li><a href='#'>Смотреть на Wink</a></li></ul></div>";
     if (user_input.toLowerCase() == "Спасибо, Вик!".toLowerCase()) return "Цель моего существования - помогать людям!";
     
     if (user_input.toLowerCase() == "Как приобрести подписку".toLowerCase()) {
-        show();
+        $(".tip1").fadeIn(250);
         return "Надеюсь, всё было понятно!"
     };
     
+    if (user_input.toLowerCase() == "Любое число от 1 до 20".toLowerCase()) return get_random("Скажем, 17");
+    if (user_input.toLowerCase() == "".toLowerCase()) return get_random("Скажем, 17");
+       
     return "Бип-буп! Команда не распознана!";
 };
 
-function show() {
-    $(".tip1").show().then(
-        $(".tip1 span:first-child()").click(function() {
-            $(".tip1").hide();
-            $(".tip2").show();
-        })
-    ).then(
-        $(".tip2 span:first-child()").click(function() {
-            $(".tip2").hide();
-            $(".tip3").show();
-        })
-    ).then(
-        $(".tip3 span:first-child()").click(function() {
-            $(".tip3").hide();
-        })
-    )
-};
+$(".tip1 .close, .tip1").click(function() {
+    $(".tip1").fadeOut(250);
+    $(".tip2").fadeIn(250);
+});
+
+$(".tip2 .close, .tip2").click(function() {
+    $(".tip2").fadeOut(250);
+    $(".tip3").fadeIn(250);
+});
+
+$(".tip3 .close, .tip3").click(function() {
+    $(".tip3").fadeOut(250);
+});
